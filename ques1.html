@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-Classes Demo</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+a:hover { color: red; }         /* Hover changes color */
+button:active { background: #28a745; color: white; }  /* Active button */
+input:focus { border-color: #007bff; outline: none; } /* Focused input */
+ul li:nth-child(odd) { background: #f0f0f0; }         /* Every odd list item */
+</style>
+</head>
+<body>
+  <div class="example">
+    <a href="#">Hover me</a>
+    <p>:hover — changes link color on hover</p>
+  </div>
+  <div class="example">
+    <button>Click me</button>
+    <p>:active — changes background when pressed</p>
+  </div>
+  <div class="example">
+    <input type="text" placeholder="Focus here">
+    <p>:focus — highlights input on focus</p>
+  </div>
+  <div class="example">
+    <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li></ul>
+    <p>:nth-child(odd) — colors alternate list items</p>
+  </div>
+</body>
+</html>

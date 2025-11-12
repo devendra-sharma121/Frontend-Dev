@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Showcase</title>
+<style>
+body {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #fafafa;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+figure img {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
+}
+figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: 0.3s;
+}
+figure:hover img { transform: scale(1.1); }
+figure:hover::after { opacity: 1; }
+figcaption {
+  text-align: center;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+  <div class="gallery">
+    <figure><img src="https://picsum.photos/200?1"><figcaption>Nature</figcaption></figure>
+    <figure><img src="https://picsum.photos/200?2"><figcaption>Beach</figcaption></figure>
+    <figure><img src="https://picsum.photos/200?3"><figcaption>Forest</figcaption></figure>
+    <figure><img src="https://picsum.photos/200?4"><figcaption>Mountains</figcaption></figure>
+    <figure><img src="https://picsum.photos/200?5"><figcaption>City</figcaption></figure>
+    <figure><img src="https://picsum.photos/200?6"><figcaption>Desert</figcaption></figure>
+  </div>
+</body>
+</html>
