@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Model Demo</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+}
+.container {
+  background: #d1e7dd;
+  padding: 20px;
+  border: 5px solid #0d6efd;
+  margin: 20px;
+  outline: 2px dashed #ff5733;
+  box-sizing: content-box;
+}
+.border-box {
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <p>Default box-sizing (content-box)</p>
+  </div>
+  <div class="container border-box">
+    <p>With box-sizing: border-box</p>
+  </div>
+</body>
+</html>
